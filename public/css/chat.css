@@ -1,0 +1,9 @@
+#chathistory {
+	border: black 1px solid;
+	width: 400px;
+	height: 400px;
+	padding: 5px;	
+}
+#txtname{
+	margin-top: 10px;
+}

@@ -1,0 +1,16 @@
+!!!
+%html
+	%head
+		%title Simple Chat Application
+		%script{ "type" => "text/javascript", "src" => "https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.js" }
+		%script{ "type" => "text/javascript", "src" => "js/chat.js"}
+		%link{"rel" => "stylesheet", "href" => "css/chat.css", "type" => "text/css"}
+	%body
+		%div{ :id => "chathistory" }
+		%form{ :method => "post", :action => "/chat/newmessage", :id => "chatform"}
+			%input{ :id => "txtname", :name => "txtname", :placeholder => "type your name...", :type => "text", :size => "40" }
+			%br
+			%textarea{ :id => "txtmessage", :name => "txtmessage", :placeholder => "write a message...", :cols => "30", :rows => "5" }
+			%br
+			%input{ :type => "button", :value => "Submit", :onclick => "javascript:sendMessage();" }
+		
